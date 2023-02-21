@@ -33,7 +33,7 @@
     }
     
     input[type="text"]:disabled, input[type="number"]:disabled {
-      background: #FFFFFF;
+      color: #ffffff;
     }
 
     #moonstones {
@@ -44,11 +44,21 @@
       color: #FFFFFF;
     }
     
+    #divider {
+      position: absolute;
+      left: 0px;
+      top: calc(50% - 1vh);
+      width: 100%;
+      height: 2vh;
+      background-color: #FFE699;
+      z-index: 100;
+    }
+    
     #dollars {
       position: absolute;
       left: 0px;
       top: 50%;
-      background-color: #BBE896;
+      background-color: #96CB9B;
     }
     
     #notice {
@@ -57,14 +67,18 @@
       top: 0px;
       width: 100%;
       height: auto;
-      background-color: #ffffff;
+      padding: 2vh;
+      color: #1E226B;
       text-align: center;
       font-family: 'Josefin Sans', sans-serif;
+      font-size: 4vh;
+      z-index: 100;
     }
   </style>
   <body>
-    <input type="number" id="moonstones" onkeyup="calculate()" autofocus>
     <div id="notice"></div>
+    <input type="number" id="moonstones" onkeyup="calculate()" autofocus>
+    <div id="divider"></div>
     <input type="text" id="dollars" disabled>
   </body>
   <script>
